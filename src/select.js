@@ -908,6 +908,13 @@
 
         $select.onSelectCallback = $parse(attrs.onSelect);
         $select.onRemoveCallback = $parse(attrs.onRemove);
+        if ($select.multiple) {
+          var defaultIsEmptyFn = ngModel.$isEmpty;
+
+          ngModel.$isEmpty = function(value) {
+            return (angular.isArray(value) && value.length === 0) || defaultIsEmptyFn(value);
+          };
+        }
 
         //From view --> model
         ngModel.$parsers.unshift(function (inputValue) {
