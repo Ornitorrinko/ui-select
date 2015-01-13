@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.9.6 - 2015-01-12T15:27:08.311Z
+ * Version: 0.9.7 - 2015-01-13T04:25:04.689Z
  * License: MIT
  */
 
@@ -899,6 +899,10 @@
         var ngModel = ctrls[1];
 
         var searchInput = element.querySelectorAll('input.ui-select-search');
+
+        searchInput.on('blur', function () {
+          element.addClass('ng-touched');
+        });
 
         $select.multiple = angular.isDefined(attrs.multiple) && (
             attrs.multiple === '' ||
