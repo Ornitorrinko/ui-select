@@ -892,6 +892,10 @@
 
         var searchInput = element.querySelectorAll('input.ui-select-search');
 
+        searchInput.on('blur', function () {
+          element.addClass('ng-touched');
+        });
+
         $select.multiple = angular.isDefined(attrs.multiple) && (
             attrs.multiple === '' ||
             attrs.multiple.toLowerCase() === 'multiple' ||
