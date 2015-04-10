@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.9.7 - 2015-02-13T15:52:20.213Z
+ * Version: 0.9.9 - 2015-04-10T20:02:05.770Z
  * License: MIT
  */
 
@@ -822,7 +822,7 @@
     }
 
     function _findApproxDupe(haystack, needle) {
-      var tempArr = angular.copy(haystack);
+      var tempArr = angular.copy(haystack || []);
       var dupeIndex = -1;
       for (var i = 0; i <tempArr.length; i++) {
         // handle the simple string version of tagging

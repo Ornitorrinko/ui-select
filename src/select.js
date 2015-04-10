@@ -814,7 +814,7 @@
     }
 
     function _findApproxDupe(haystack, needle) {
-      var tempArr = angular.copy(haystack);
+      var tempArr = angular.copy(haystack || []);
       var dupeIndex = -1;
       for (var i = 0; i <tempArr.length; i++) {
         // handle the simple string version of tagging
