@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.9.9 - 2015-04-10T20:02:05.770Z
+ * Version: 1.0.0 - 2015-04-10T21:49:27.437Z
  * License: MIT
  */
 
@@ -424,7 +424,7 @@
               }
             }
             // search ctrl.selected for dupes potentially caused by tagging and return early if found
-            if ( ctrl.selected && ctrl.selected.filter( function (selection) { return angular.equals(selection, item); }).length > 0 ) {
+            if ( ctrl.selected && ctrl.selected.filter&& ctrl.selected.filter( function (selection) { return angular.equals(selection, item); }).length > 0 ) {
               ctrl.close(skipFocusser);
               return;
             }
